@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Portfoligrid</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -39,7 +40,7 @@
 							  <div class="port-item p-4 bg-success" data-toggle="collapse" data-target="#resume">
 								  <i class="fa fa-graduation-cap d-block"></i> Resume
 							  </div>
-							  <div class="port-item p-4 bg-warning">
+							  <div class="port-item p-4 bg-warning" data-toggle="collapse" data-target="#work">
 								  <i class="fa fa-folder-open d-block"></i> Work
 							  </div>
 							  <div class="port-item p-4 bg-danger">
@@ -143,6 +144,62 @@
 		  </div>
 	  </div>
 
+	  <!-- WORK -->
+	  <div id="work" class="collapse">
+		  <div class="card card-body bg-warning py-5">
+			  <h3>My Portfolio</h3>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, vel!</p>
+		  </div>
+		  <div class="card card-body py-5">
+			  <h3>What have I build?</h3>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, totam.</p>
+			  <div class="row no-gutters">
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=251" alt="" class="img-fluid">
+					  </a>
+				  </div>
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=252" alt="" class="img-fluid">
+					  </a>
+				  </div>
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=253" alt="" class="img-fluid">
+					  </a>
+				  </div>
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=265" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=265" alt="" class="img-fluid">
+					  </a>
+				  </div>
+			  </div>
+			  <div class="row no-gutters">
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=241" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=241" alt="" class="img-fluid">
+					  </a>
+				  </div>
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=222" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=222" alt="" class="img-fluid">
+					  </a>
+				  </div>
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=223" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=223" alt="" class="img-fluid">
+					  </a>
+				  </div>
+				  <div class="col-md-3 p-1">
+					  <a href="https://unsplash.it/1200/768.jpg?image=215" data-toggle="lightbox">
+						  <img src="https://unsplash.it/600.jpg?image=215" alt="" class="img-fluid">
+					  </a>
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+
 	  <!-- FOOTER -->
 	  <div id="main-footer" class="p-5 bg-dark text-white">
 		  <div class="row">
@@ -156,11 +213,17 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.js"></script>
 	<script src="js/bootstrap.min.js"></script>
   <script>
 	  $('.port-item').click(function() {
-	  	$('.collapse').collapse('hide');
-	  })
+	  	$
+		  ('.collapse').collapse('hide');
+	  });
+	  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+		  event.preventDefault();
+		  $(this).ekkoLightbox();
+	  });
   </script>
 </body>
 </html>
